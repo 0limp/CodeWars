@@ -4,7 +4,7 @@
 // Мы будем считать  A, E, I, O, U  гласными для этой Ката (но не Y)
 // Входная строка будет состоять только из строчных букв и/или пробелов.
 
-function getCount1(str) {
+function getCount1(str) {   // Array
     const result = []
     const vowel = ['a', 'e', 'i', 'o', 'u'];
     const array = str.toLowerCase().split('');
@@ -18,7 +18,19 @@ function getCount1(str) {
     return result.length
 }
 
-
+function getCount(str) {    // counter
+    let result = 0;
+    const vowel = ['a', 'e', 'i', 'o', 'u'];
+    const array = str.toLowerCase().split('');
+    for (let i = 0; i < array.length; i++) {
+        for (let k = 0; k < vowel.length; k++) {
+            if (array[i] === vowel[k]) {
+                result++
+            }
+        }
+    }
+    return result
+}
 // console.log(getCount("abracadabra"));    // ==> 5
 // console.log(getCount("Anyway"));         // ==> 2
 // console.log(getCount("apple"));          // ==> 2

@@ -22,4 +22,4 @@ function disemvowel(str) {
 }
 
 console.log(disemvowel("This website is for losers LOL!")); // "Ths wbst s fr lsrs LL!"
-console.log(disemvowel("What are you, a communist?")); // "Wht r y,  cmmnst?"
+// console.log(disemvowel("What are you, a communist?")); // "Wht r y,  cmmnst?"

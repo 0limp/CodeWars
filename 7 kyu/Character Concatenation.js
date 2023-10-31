@@ -17,4 +17,4 @@ function charConcat(string) {
 
 // console.log(charConcat("CodeWars"));                // Cs1or2da3eW4
 // console.log(charConcat("abc def"));                 // af1be2cd3
-// console.log(charConcat("CodeWars Rocks"));          // Cs1ok2dc3eo4WR5a 6rs7
+// console.log(charConcat("CodeWars Rocks"));          // Cs1ok2dc3eo4WR5a 6rs7 

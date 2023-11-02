@@ -5,7 +5,7 @@
 // - Ввод: 145263       Вывод: 654321
 // - Ввод: 123456789    Вывод: 987654321
 
-function descendingOrder1(n) {
+function descendingOrder(n) {
     const a = String(n).split('').map(e => Number(e)).sort((a, b) => b - a).join('')
     return Number(a)
 }

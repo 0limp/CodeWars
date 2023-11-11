@@ -3,23 +3,22 @@
 
 // Учитывая строку, определите, является ли она панграммой. Возвращайте True, если это так, и False, если нет. Не обращайте внимания на цифры
 // и знаки препинания.
+var string = "The quick brown fox jumps over the lazy dog."
 
 function isPangram(string) {
     let count = [];
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    const arrStr = string.toLowerCase().split(' ').join('').split('')
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const arrStr = string.toLowerCase().split(' ');
     for (let i = 0; i < alphabet.length; i++) {
         for (let k = 0; k < arrStr.length; k++) {
-            if (alphabet[i] === arrStr[k]) {
-                count.push(alphabet[i])
-                continue
+            if (arrStr[k].includes(alphabet[i])) {
+                count.push(alphabet[i]);
+                break; // выход из цикла при совпадении
             }
         }
     }
-    const find = count.filter((e, i, arr) => arr.indexOf(e) === i)
-    if (find.length >= 26) {
-        return true
-    } else {
-        return false
-    }
+    return count.length === 26;
 }
+
+
+// console.log(isPangram(string));

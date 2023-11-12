@@ -20,4 +20,3 @@ function solution(number) {
         return 0
     }
 }
-console.log(solution(23));

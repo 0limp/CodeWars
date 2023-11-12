@@ -11,3 +11,18 @@
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 
 // Примечание. При наличии 4 и более имен число "and 2 others"просто увеличивается.
+
+function likes(names) {
+    [a, b, ...other] = names;
+    if (names.length >= 4) {
+        return `${a}, ${b} and ${other.length} others like this`
+    } else if (names.length === 3) {
+        return `${a}, ${b} and ${other} like this`
+    } else if (names.length === 2) {
+        return `${a} and ${b} like this`
+    } else if (names.length === 1) {
+        return `${a} likes this`
+    } else {
+        return "no one likes this"
+    }
+}

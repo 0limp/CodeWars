@@ -1,5 +1,4 @@
 // В массиве целых чисел найдите то, которое встречается нечетное количество раз.
-
 // Всегда будет только одно целое число, которое появляется нечетное количество раз.
 
 // Примеры
@@ -9,15 +8,16 @@
 // [0,1,0,1,0] должен вернуться 0, потому что это встречается 3 раза
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] должен вернуться 4, потому что он появляется 1 раз
 
-// function findOdd(A) {
-//     const x = 0;
-//     const a = A.sort((a, b) => a - b)
-//     //  1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4
-//     const b = A.filter((item, index) => A.indexOf(item) === index);
-//     return b;
-// }
-
-// console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]));     // 5
-// console.log(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5]));                          // -1
-// console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));                       // 4
-
+function findOdd(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        let index = arr.indexOf(arr[i])
+        while (index !== -1) {
+            count++;
+            index = arr.indexOf(arr[i], index + 1)
+        }
+        if (count % 2 !== 0) {
+            return arr[i]
+        }
+    }
+}

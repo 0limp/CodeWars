@@ -13,9 +13,9 @@
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
 function duplicateCount(text) {
-    text = text.toLowerCase()
     const obj = {}
     let duplicates = 0;
+    text = text.toLowerCase()
     for (const char of text) {
         let count = 0;
         let index = text.indexOf(char)

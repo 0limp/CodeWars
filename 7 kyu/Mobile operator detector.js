@@ -20,9 +20,9 @@
 // 099 xxx xxx xx - Тест МТС [Просто верните «МТС»]
 
 function detectOperator(a) {
-    const z = a.toString().split('').slice(1, 4).join('')
+    const code = a.toString().split('').slice(1, 4).join('')
     const mask = a.toString().match(/ /g)
-    return mask
+    return code
 }
 
 console.log(detectOperator(80931551119))        // "Life:)

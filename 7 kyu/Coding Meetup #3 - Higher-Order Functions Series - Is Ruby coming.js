@@ -17,6 +17,6 @@ var list1 = [
 // Входной массив всегда будет действительным и отформатирован, как в примере выше.
 
 function isRubyComing(list) {
-    return list.some(({ language }) => language == 'Ruby')
+    return list.some(({ language }) => language === 'Ruby')
 }
 

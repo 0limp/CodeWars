@@ -17,9 +17,6 @@ var list1 = [
 
 // Примечания:
 // Входной массив всегда будет действительным и отформатирован, как в примере выше.
-//  `${item.firstName}, ${item.country}` 
-// 'There will be no Python developers'
-
 function getFirstPython(list) {
     for (let i = 0; i < list.length; i++) {
         if (list[i]['language'] === 'Python') {

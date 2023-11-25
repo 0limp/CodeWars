@@ -28,11 +28,3 @@ function getFirstPython(list) {
     }
     return 'There will be no Python developers'
 }
-
-console.log(getFirstPython(list1));
-
-// Best
-function getFirstPython1(list) {
-    const dev = list.find(x => x.language === "Python")
-    return dev ? `${dev.firstName}, ${dev.country}` : "There will be no Python developers"
-}

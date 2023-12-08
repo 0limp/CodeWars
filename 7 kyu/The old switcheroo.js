@@ -10,7 +10,3 @@ function vowel2index(str) {
     return str.replace(/[aeiou]/gi, (vowel, index) => index + 1)
 }
 
-console.log(vowel2index('this is my string'));
-console.log(vowel2index('Codewars is the best site in the world'));
-console.log(vowel2index('Tomorrow is going to be raining'));        //  T2m4rr7w 10s g1415ng t20 b23 r2627n29ng
-console.log(vowel2index(''));

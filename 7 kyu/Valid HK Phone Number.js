@@ -3,5 +3,5 @@ function isValidHKPhoneNumber(str) {
 }
 
 function hasValidHKPhoneNumber(str) {
-    return /\d{4}\s\d{4}/.test(str.match(/\d{4} \d{4}/))
+    return /^\d{4}\s\d{4}$/.test(str.match(/\d{4}\s\d{4}/))
 }

@@ -27,4 +27,6 @@ function removeDuplicateWords(s) {
     return filteredArray.join(" ")
 };
 
-console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'));       // 'alpha beta gamma delta'
+function removeDuplicateWords4(s) {
+    return s.replace(/\b([a-z]+)\b\s(?=.*\b\1\b)/g, '')
+}

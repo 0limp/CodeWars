@@ -11,7 +11,7 @@ function calculate(str) {
     return result + '';
 }
 
-console.log(calculate("1plus2plus3plus4"));
-console.log(calculate('1plus2plus3minus4'));
-console.log(calculate('1minus2minus3minus4'));
+// console.log(calculate("1plus2plus3plus4"));
+// console.log(calculate('1plus2plus3minus4'));
+// console.log(calculate('1minus2minus3minus4'));
 

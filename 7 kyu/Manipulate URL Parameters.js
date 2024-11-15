@@ -49,13 +49,3 @@ function addOrChangeUrlParameter(url, param) {
     return `${url}?${updateName}=${updateValue}`;
 }
 
-
-// console.log(addOrChangeUrlParameter('http://example.com', 'ID=1234'));
-// console.log(addOrChangeUrlParameter('http://example.com?ID=666', 'ID=1234'));
-// console.log(addOrChangeUrlParameter('http://example.com?Name=Allan', 'ID=1234'));
-console.log(addOrChangeUrlParameter('http://example.com?Name=Allan&age=33', 'ID=1234'));
-
-
-// http://example.com/              ID=1234     ====>   http://example.com/?ID=1234
-// http://example.com?ID=666        ID=1234     ====>   http://example.com?ID=1234
-// http://example.com?Name=Allan    ID=1234     ====>   http://example.com?Name=Allan&ID=1234

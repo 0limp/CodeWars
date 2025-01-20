@@ -24,15 +24,8 @@
 // uglify_word("Hello World") === "HeLlO WoRlD"
 
 function uglifyWord(s) {
-
+    return s.replace(/[a-z]+/gi, (m) => {
+        return ([...m].map((char, i) => (i % 2 === 0) ? char.toUpperCase() : char.toLowerCase()).join('')
+        )
+    })
 }
-
-console.log(uglifyWord("aaa"));                     // ===> "AaA");
-console.log(uglifyWord("AAA"));                     // ===> "AaA");
-console.log(uglifyWord("aaa-bbb-ccc"));             // ===> "AaA-BbB-CcC");
-console.log(uglifyWord("BbB"));                     // ===> "BbB");
-console.log(uglifyWord("AaA-BbB-CcC"));             // ===> "AaA-BbB-CcC");
-console.log(uglifyWord("eeee-ffff-gggg"));          // ===> "EeEe-FfFf-GgGg");
-console.log(uglifyWord("EeEe-FfFf-GgGg"));          // ===> "EeEe-FfFf-GgGg");
-console.log(uglifyWord("qwe123asdf456zxc"));        // ===> "QwE123AsDf456ZxC");
-console.log(uglifyWord("Hello World"));             // ===> "HeLlO WoRlD");

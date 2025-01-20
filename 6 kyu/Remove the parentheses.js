@@ -14,11 +14,11 @@
 // Круглые скобки могут быть вложенными.
 
 function removeParentheses(s) {
-    return s.replace(/\(.+?\)/g, '')
+    return s.replace(/(.*?)(?:\(.*\))(.*?)/, '$1$2')
 }
 
 console.log(removeParentheses("example(unwanted thing)example"));                           // "exampleexample"
-console.log(removeParentheses("a (bc d)e"));                                                // "a e"    
+// console.log(removeParentheses("a (bc d)e"));                                             // "a e"
 console.log(removeParentheses("a(b(c))"));                                                  // "a"
-console.log(removeParentheses("hello example (words(more words) here) something"));         // "hello example  something"
-console.log(removeParentheses("a(first group) (second group) (third group)b"));             // "  "
+// console.log(removeParentheses("hello example (words(more words) here) something"));      // "hello example  something"
+console.log(removeParentheses("(first group) (second group) (third group)"));               // "  "

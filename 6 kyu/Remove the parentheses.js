@@ -14,7 +14,10 @@
 // Круглые скобки могут быть вложенными.
 
 function removeParentheses(s) {
-    return s.replace(/(.*?)(?:\(.*\))(.*?)/, '$1$2')
+    while (s.includes('(')) {
+        s = s.replace(/\([^()]*\)/g, '');
+    }
+    return s;
 }
 
 console.log(removeParentheses("example(unwanted thing)example"));                           // "exampleexample"

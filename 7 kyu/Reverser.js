@@ -1,13 +1,15 @@
-// не завершенно
+// Реализуйте функцию reverse, которая принимает на вход число n и переворачивает его.
+// Например, reverse(123) должна возвращать 321. Это следует делать без преобразования введенного числа в строку.
+
 function reverse(n) {
-  const digits = [];
+  let result = 0;
 
   while (n > 0) {
-    digits.push(n % 10);
+    result = result * 10 + (n % 10);
     n = Math.floor(n / 10);
   }
 
-  return digits;
+  return result;
 }
 
 console.log(reverse(1234)); //      ->    4321

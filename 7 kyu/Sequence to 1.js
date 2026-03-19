@@ -1,4 +1,4 @@
-function x(n) {
+function seqToOne(n) {
   const result = [];
   const step = n > 0 ? -1 : 1;
 
@@ -8,4 +8,5 @@ function x(n) {
 
   return result;
 }
-console.log(x(-5));
+
+console.log(seqToOne(-5));
